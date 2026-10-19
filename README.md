@@ -9,7 +9,7 @@ Aplikasi katalog menu coffee shop **Sun Beans Coffee** (Tema A) menggunakan **No
 
 ## Video Penjelasan (YouTube, Publik)
 
-https://www.youtube.com/watch?v=[ID_VIDEO]
+[Tonton Video Presentasi di Sini](https://youtu.be/BkgVO0pYV7o)
 
 ## Fitur
 

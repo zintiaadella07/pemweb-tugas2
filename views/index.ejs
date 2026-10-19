@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+
+<section class="hero">
+  <h1>Menu <%= namaToko %></h1>
+  <p>“Where good coffee meets sunshine, enjoy your day at Sun Beans Coffee.”</p>
+</section>
+
+<section class="filter">
+  <a href="/" class="chip <%= kategoriAktif === '' ? 'aktif' : '' %>">Semua</a>
+  <% daftarKategori.forEach(function(kat) { %>
+    <a href="/?kategori=<%= kat %>" class="chip <%= kategoriAktif.toLowerCase() === kat ? 'aktif' : '' %>">
+      <%= kat %>
+    </a>
+  <% }); %>
+</section>
+
+<% if (kategoriAktif) { %>
+  <p class="info">Menampilkan kategori: <strong><%= kategoriAktif %></strong> (<%= menu.length %> menu)</p>
+<% } %>
+
+<% if (menu.length === 0) { %>
+  <p class="kosong">Tidak ada menu pada kategori ini.</p>
+<% } else { %>
+  <section class="grid">
+    <% menu.forEach(function(item) { %>
+      <article class="kartu">
+        <img src="<%= item.foto %>" alt="Foto <%= item.nama %>">
+        <div class="kartu-isi">
+          <span class="badge"><%= item.kategori %></span>
+          <h3><%= item.nama %></h3>
+          <p class="harga">Rp <%= item.harga.toLocaleString('id-ID') %></p>
+          <a href="/menu/<%= item.id %>" class="tombol">Lihat Detail</a>
+        </div>
+      </article>
+    <% }); %>
+  </section>
+<% } %>
+
+<%- include('partials/footer') %>

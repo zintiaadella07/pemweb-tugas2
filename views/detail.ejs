@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+
+<a href="/" class="kembali">&larr; Kembali ke daftar menu</a>
+
+<article class="detail">
+  <img src="<%= item.foto %>" alt="Foto <%= item.nama %>">
+  <div class="detail-isi">
+    <span class="badge"><%= item.kategori %></span>
+    <h1><%= item.nama %></h1>
+    <p class="harga besar">Rp <%= item.harga.toLocaleString('id-ID') %></p>
+    <h3>Deskripsi</h3>
+    <p><%= item.deskripsi %></p>
+    <a href="/?kategori=<%= item.kategori %>" class="tombol">Lihat menu <%= item.kategori %> lainnya</a>
+  </div>
+</article>
+
+<%- include('partials/footer') %>

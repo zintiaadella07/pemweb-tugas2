@@ -1,0 +1,14 @@
+{
+  "name": "pemweb-tugas2",
+  "version": "1.0.0",
+  "description": "Tugas 2 Pemrograman Web - Express, Parameter Routing, dan SSR EJS (Sun Beans Coffee)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^7.0.2",
+    "express": "^5.3.0"
+  }
+}
